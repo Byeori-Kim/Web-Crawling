@@ -5,7 +5,7 @@ from datetime import datetime
 
 count = 1
 
-start_row = 1
+start_row = 10244
 
 print('Crawler starting...')
 
@@ -41,10 +41,6 @@ with open("list.csv", encoding="ISO-8859-1") as file:
                 flag_append = 1
 
                 print('  Checkpoint 4: {}'.format(datetime.now() - row_start_time))
-                # to_append = p
-                # df.loc[len(df)] = to_append
-                # print(p)
-                # print(count)
                 df.to_csv("result.csv", header=False)
                 print('  Checkpoint 5: {}'.format(datetime.now() - row_start_time))
 
@@ -62,11 +58,3 @@ with open("list.csv", encoding="ISO-8859-1") as file:
             print('currently on row {}'.format(count))
 
         count = count + 1
-
-        # pac = pd.DataFrame([p], columns=['Packers1', 'Packers2', 'Packers3', 'Packers4', 'Packers5'])
-        # pac.to_csv(list.csv)
-        # pac = []
-        # pac.append(packers.string)
-        # pac_col = reader['Packer1']
-        # pac_col[count] = pac
-        # reader.to_csv("list.csv")
